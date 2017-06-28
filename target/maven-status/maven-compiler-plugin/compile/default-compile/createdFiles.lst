@@ -1,0 +1,11 @@
+com\saiy\utils\Utils.class
+com\saiy\models\UsersExample$Criteria.class
+com\saiy\models\UsersExample$Criterion.class
+com\saiy\config\WebAppInitializer.class
+com\saiy\models\UsersExample.class
+com\saiy\models\Users.class
+com\saiy\controller\MainController.class
+com\saiy\models\UsersExample$GeneratedCriteria.class
+com\saiy\services\TestService.class
+com\saiy\config\WebConfig.class
+com\saiy\mapper\UsersMapper.class

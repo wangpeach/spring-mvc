@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<!--"WEB-INF/lib/mysql-connector-java-5.1.33-bin.jar-->
+	<classPathEntry location="E:\Libs\spring-mvc\mysql-bin.jar"></classPathEntry>
+	
+	<context id="MySql" targetRuntime="MyBatis3">
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" 
+			connectionURL="jdbc:mysql://192.168.0.225:3306/t882016015"
+			userId="root" 
+			password="race">
+		</jdbcConnection>
+		
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false"></property>
+		</javaTypeResolver>
+		<javaModelGenerator targetPackage="com.saiy.models" targetProject="../src">
+			<property name="enableSubPackages" value="true"></property>
+			<property name="trimStrings" value="true"></property>
+		</javaModelGenerator>
+		
+		<sqlMapGenerator targetPackage="com.saiy.mapper" targetProject="../src">
+			<property name="enableSubPackages" value="true"></property>
+		</sqlMapGenerator>
+		
+		<javaClientGenerator type="XMLMAPPER" 
+			targetPackage="com.saiy.mapper"
+			implementationPackage="com.saiy.mapper.impl"
+			targetProject="../src">
+			<property name="enableSubPackages" value="true"></property>
+		</javaClientGenerator>
+		<!-- 配置要生成的文件，根据数据表生成底层代码 -->
+		<!-- 
+		 <table tableName="users" domainObjectName="Users">
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="users_createdate"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="users_yeji"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="users_money"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="users_jiangjin"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="users_chongxiao"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="users_jifen"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="users_datetime"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="users_minyeji"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="users_chongzhi"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="users_shenhedate"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="users_getpassdate"></columnOverride>
+		</table>
+		 <table tableName="product" domainObjectName="Product">
+		 	<columnOverride javaType="String" jdbcType="VARCHAR" column="product_price"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="product_createdate"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="product_youfei"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="product_zhekou"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="product_jinhuojia"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="product_market"></columnOverride>
+		 </table>
+		 -->
+	<!-- 	 <table tableName="pyramid" domainObjectName="Pyramid">
+		 	<columnOverride javaType="String" jdbcType="VARCHAR" column="create_date"></columnOverride>
+		 </table>
+		  <table tableName="users_pyramid" domainObjectName="UsersPyramid">
+		 	
+		 </table> -->
+		 
+		<!--  <table tableName="users" domainObjectName="Users">
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="users_createdate"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="users_yeji"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="users_money"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="users_jiangjin"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="users_chongxiao"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="users_jifen"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="users_datetime"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="users_minyeji"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="users_chongzhi"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="users_shenhedate"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="users_getpassdate"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="default8"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="default9"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="default10"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="users_integral"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="ys_total"></columnOverride>
+			<columnOverride javaType="String" jdbcType="VARCHAR" column="ys_integral"></columnOverride>
+		</table> -->
+		  <table tableName="users" domainObjectName="Users">
+		 	<columnOverride javaType="String" jdbcType="VARCHAR" column="users_createdate"></columnOverride>
+		 </table>
+	</context>
+</generatorConfiguration>
